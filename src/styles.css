@@ -1,0 +1,73 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #eef4ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at top left, #dbeafe 0, transparent 36%), linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%); }
+button, input, select { font: inherit; }
+button, .button { border: 0; border-radius: 16px; padding: 13px 16px; background: #2563eb; color: white; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; box-shadow: 0 10px 24px rgba(37, 99, 235, .24); }
+button.secondary, .button.secondary { background: #e0ecff; color: #1d4ed8; box-shadow: none; }
+button.ghost { background: #f1f5f9; color: #64748b; box-shadow: none; padding: 8px 10px; border-radius: 12px; font-size: 12px; }
+input, select { width: 100%; border: 1px solid #dbe3ef; border-radius: 16px; padding: 13px 14px; background: rgba(255,255,255,.92); color: #0f172a; outline: none; }
+input:focus, select:focus { border-color: #2563eb; box-shadow: 0 0 0 4px rgba(37,99,235,.1); }
+label { color: #64748b; font-size: 13px; font-weight: 800; display: grid; gap: 7px; }
+.app-shell { width: min(100%, 980px); margin: 0 auto; padding: 18px 16px 100px; }
+.hero { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 18px 4px 22px; }
+h1 { font-size: clamp(30px, 7vw, 54px); line-height: .95; margin: 0; letter-spacing: -.06em; }
+h2 { font-size: clamp(44px, 12vw, 76px); margin: 4px 0; letter-spacing: -.07em; }
+h3 { margin: 0 0 14px; font-size: 18px; letter-spacing: -.02em; }
+.eyebrow { margin: 0 0 6px; color: #2563eb; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
+.subtle { color: #64748b; margin: 0; }
+.app-icon { width: 70px; height: 70px; flex: 0 0 auto; border-radius: 24px; background: linear-gradient(135deg, #2563eb, #22c55e); color: white; display: grid; place-items: center; box-shadow: 0 18px 40px rgba(37,99,235,.28); }
+.stack { display: grid; gap: 14px; }
+.card { background: rgba(255,255,255,.86); border: 1px solid rgba(226,232,240,.9); border-radius: 26px; padding: 18px; box-shadow: 0 16px 50px rgba(15,23,42,.08); backdrop-filter: blur(18px); }
+.primary-card { display: flex; justify-content: space-between; align-items: center; gap: 20px; background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(219,234,254,.88)); }
+.ring { width: 104px; height: 104px; border-radius: 999px; border: 12px solid #bfdbfe; display: grid; place-items: center; text-align: center; color: #1d4ed8; font-weight: 900; flex: 0 0 auto; }
+.ring span { display: block; font-size: 22px; line-height: 1; }
+.ring small { display: block; color: #64748b; font-size: 11px; text-transform: uppercase; }
+.grid { display: grid; gap: 12px; }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.metric { min-height: 124px; display: flex; flex-direction: column; gap: 8px; justify-content: space-between; }
+.metric-icon { width: 36px; height: 36px; border-radius: 14px; background: #eff6ff; color: #2563eb; display: grid; place-items: center; }
+.metric span { color: #64748b; font-weight: 800; font-size: 13px; }
+.metric strong { font-size: 25px; letter-spacing: -.04em; }
+.date-row { display: flex; gap: 10px; align-items: center; }
+.date-row input { max-width: 180px; }
+.chip { margin-left: auto; background: #dcfce7; color: #166534; border-radius: 999px; padding: 9px 12px; font-weight: 900; font-size: 13px; white-space: nowrap; }
+.macro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.macro-grid div { background: #f8fafc; border-radius: 18px; padding: 13px; display: grid; gap: 4px; }
+.macro-grid span { color: #64748b; text-transform: capitalize; font-size: 12px; font-weight: 900; }
+.macro-grid strong { font-size: 20px; }
+.row { display: flex; justify-content: space-between; gap: 12px; align-items: center; border-top: 1px solid #edf2f7; padding: 13px 0; cursor: pointer; }
+.row:first-of-type { border-top: 0; }
+.row div { display: grid; gap: 3px; }
+.row span { color: #64748b; font-size: 13px; }
+.empty { background: #f8fafc; color: #64748b; border-radius: 18px; padding: 16px; margin: 0; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.form-grid input:first-child { grid-column: span 2; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.bars { height: 190px; display: flex; align-items: flex-end; gap: 8px; padding-top: 10px; }
+.bars.compact { gap: 3px; height: 150px; }
+.bar-wrap { flex: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; min-width: 0; }
+.bar { width: 100%; min-height: 4px; border-radius: 999px 999px 6px 6px; background: linear-gradient(180deg, #2563eb, #93c5fd); }
+.bar-wrap small { color: #64748b; font-size: 10px; }
+.bottom-nav { position: fixed; left: 50%; transform: translateX(-50%); bottom: 14px; width: min(calc(100% - 24px), 560px); background: rgba(255,255,255,.92); border: 1px solid rgba(226,232,240,.95); border-radius: 28px; padding: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; box-shadow: 0 18px 50px rgba(15,23,42,.18); backdrop-filter: blur(18px); z-index: 10; }
+.nav { background: transparent; color: #64748b; box-shadow: none; border-radius: 20px; padding: 10px 4px; flex-direction: column; gap: 3px; font-size: 11px; }
+.nav svg { width: 20px; height: 20px; }
+.nav.active { background: #2563eb; color: white; box-shadow: 0 10px 20px rgba(37,99,235,.25); }
+@media (max-width: 620px) {
+  .app-shell { padding-left: 12px; padding-right: 12px; }
+  .hero { align-items: flex-start; }
+  .app-icon { width: 58px; height: 58px; border-radius: 20px; }
+  .grid.two { grid-template-columns: 1fr 1fr; }
+  .primary-card { align-items: flex-start; }
+  .ring { width: 88px; height: 88px; border-width: 10px; }
+  .ring span { font-size: 18px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-grid input:first-child { grid-column: span 1; }
+  .macro-grid { grid-template-columns: repeat(2, 1fr); }
+}
