@@ -1,0 +1,21 @@
+{
+  "name": "Health Dashboard Pro",
+  "short_name": "Health Pro",
+  "start_url": "/health-dashboard-pro/",
+  "scope": "/health-dashboard-pro/",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#f8fafc",
+  "icons": [
+    {
+      "src": "/health-dashboard-pro/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/health-dashboard-pro/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
